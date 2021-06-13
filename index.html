@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Documents Uploader</title>
+  <style>
+    
+    body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: white;
+    }
+
+    #app {
+      /* width: 30%; */
+      grid-column: 2/3;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto 100px 1fr;
+      row-gap: 10px;
+    }
+
+    .file-components {
+      display: grid;
+      grid-template-columns: 3;
+    }
+
+    
+
+    #app-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    #reset-button {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    #submit-button {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    #drop-area {
+      border-radius: 10px;
+      border-style: dashed;
+      border-color: lightgray;
+      border-width: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 5px;
+    }
+
+    .form {
+      display: grid;
+      grid-template-columns: 100px auto;
+      row-gap: 10px;
+      /* border-style: solid;
+      border-width: 1px;
+      border-color: lightblue; */
+      padding: 3px;
+    }
+
+    #checkbox{
+      grid-column: 2/3;
+      display: flex;
+    }
+
+    #validation-message{
+      grid-column: 2/3;
+      color:lightcoral;
+    }
+
+    #resolve {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div id="app-actions">
+      <div id="reset-button">
+        <input type="button" value="Reset" />
+      </div>
+      <div id="submit-button">
+        <input type="button" value="Submit" />
+      </div>
+    </div>
+    <div id="app-state">
+      <span>Ready</span>
+    </div>
+    <div>
+      <p>
+        <strong>3</strong> documents selected
+      </p>
+    </div>
+    <div id="drop-area">
+      Drag your documents here
+    </div>
+    <div>
+      <br />
+    </div>
+    <div class="file-components">
+      <form>
+        <div class="form">
+          <label>File name</label>
+          <input type="text" value="ABC1224.pdf" />
+          <label>NHI</label>
+          <div id="resolve">
+            <input disabled type="text" value="ABC1224"/>
+            <label>Referral</label>
+          </div>
+          <label>Report date</label>
+          <input type="text" value="03/08/2020" />
+          <label>Category</label>
+          <select>
+            <option>-- Select Category --</option>
+            <option>Consents</option>
+            <option>MRI</option>
+            <option>US</option>
+            <option>CT Scan</option>
+            <option>GPs & Referrals</option>
+            <option>Misc</option>
+          </select>
+          <div id="checkbox">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> Create task</label><br>
+          </div>
+          <!-- <p id="validation-message">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
+Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.
+          </p> -->
+        </div>
+      </form>
+    </div>
+    <div>
+      <hr />
+    </div>
+    <div class="file-components">
+      <form>
+        <div class="form">
+          <label>File name</label>
+          <input type="text" value="US.pdf" />
+          <label>NHI</label>
+          <div id="resolve">
+            <input type="text" value="ABC1524"/>
+            <label>Case</label>
+          </div>
+          <label>Report date</label>
+          <input type="text" value="03/08/2020" />
+          <label>Category</label>
+          <select>
+            <option>-- Select Category --</option>
+            <option>Consents</option>
+            <option>MRI</option>
+            <option>US</option>
+            <option>CT Scan</option>
+            <option>GPs & Referrals</option>
+            <option>Misc</option>
+          </select>
+          <div id="checkbox">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> Create task</label><br>
+          </div>
+          <!-- <p id="validation-message">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
+Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.
+          </p> -->
+        </div>
+      </form>
+    </div>
+    <div>
+      <hr />
+    </div>
+    <div class="file-components">
+      <form>
+        <div class="form">
+          <label>File name</label>
+          <input type="text" value="ABC1224.pdf" />
+          <label>NHI</label>
+          <div id="resolve">
+            <input disabled type="text" value="ABC1224"/>
+            <label>Referral</label>
+          </div>
+          <label>Report date</label>
+          <input type="text" value="03/08/2020" />
+          <label>Category</label>
+          <select>
+            <option>-- Select Category --</option>
+            <option>Consents</option>
+            <option>MRI</option>
+            <option>US</option>
+            <option>CT Scan</option>
+            <option>GPs & Referrals</option>
+            <option>Misc</option>
+          </select>
+          <div id="checkbox">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> Create task</label><br>
+          </div>
+          <p id="validation-message">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
+Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
